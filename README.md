@@ -4,7 +4,7 @@ Repositório oficial de aplicativos `.apx` do Flux OS.
 
 - **Índice:** [index.json](./index.json)
 - **Instalação via loja:** Flux Store (GUI)
-- **Instalação via terminal:** `flux-pkg install <app>`
+- **Instalação via terminal:** `flux pkg install <app>`
 
 ---
 
@@ -105,7 +105,7 @@ flux-apx-build --validate meu-app-1.0.0.apx
 ### 5. Instale localmente para testar
 
 ```bash
-flux-pkg install meu-app-1.0.0.apx
+flux pkg install meu-app-1.0.0.apx
 ```
 
 O app aparece no menu em seguida.
@@ -176,25 +176,30 @@ O app aparece no menu em seguida.
 
 ---
 
-## Comandos do `flux-pkg`
+## Comandos do `flux`
 
 ```bash
-# Listar apps disponíveis no repositório
-flux-pkg list-remote
+# Listar apps instalados
+flux pkg list
 
-# Buscar apps
-flux-pkg search terminal
+# Buscar apps instalados
+flux pkg search terminal
 
 # Instalar (por slug ou por caminho .apx)
-flux-pkg install flux-terminal
-flux-pkg install ./meu-app.apx
+flux pkg install flux-terminal
+flux pkg install ./meu-app.apx
+
+# Info de um app instalado
+flux pkg info flux-terminal
 
 # Atualizar um app
-flux-pkg update flux-terminal
+flux pkg update flux-terminal
 
 # Remover um app
-flux-pkg remove flux-terminal
+flux pkg remove flux-terminal
 ```
+
+> Veja todos os comandos com `flux help`.
 
 ---
 
